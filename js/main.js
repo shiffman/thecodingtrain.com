@@ -44,7 +44,7 @@ function buildPlayer(id, el) {
 	  }
 
 	  function onPlayerReady(event) {
-	    event.target.playVideo();
+	    // event.target.playVideo();
 	    $(".latest-container").fitVids();
 	    $(".latest-container").addClass('in');
 	  }
@@ -52,16 +52,16 @@ function buildPlayer(id, el) {
 	  // 5. The API calls this function when the player's state changes.
 	  //    The function indicates that when playing a video (state=1),
 	  //    the player should play for six seconds and then stop.
-	  var done = false;
-	  function onPlayerStateChange(event) {
-	    if (event.data == YT.PlayerState.PLAYING && !done) {
-	      setTimeout(stopVideo, 6000);
-	      done = true;
-	    }
-	  }
-	  function stopVideo() {
-	    player.stopVideo();
-	  }
+	  //var done = false;
+	  //function onPlayerStateChange(event) {
+	  //  if (event.data == YT.PlayerState.PLAYING && !done) {
+	  //    setTimeout(stopVideo, 6000);
+	  //    done = true;
+	  //  }
+	  //}
+	  //function stopVideo() {
+	  //  player.stopVideo();
+	  //}
 
 function getPlaylists() {
 
