@@ -1,5 +1,5 @@
 var apiKey 				= "AIzaSyADOKEHZag2UMG52bd7ApxDOssdzVo0j8I";
-var shiffmanPlaylists 	= ["PLRqwX-V7Uu6YVljJvFRCyRM6mmF5wMPeE, PLRqwX-V7Uu6ZwSmtE13iJBcoI-r4y7iEc"];
+var shiffmanPlaylists 	= ["PLRqwX-V7Uu6ZiZxtDDRCi6uhfTH4FilpH, PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA"];
 var shiffmanChannelId 	= "UCvjgXvBlbQiydffZU7m1_aw";
 
 var player;
