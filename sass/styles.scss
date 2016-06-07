@@ -193,6 +193,10 @@ header {
 
 #featured-playlist {
 
+	h2 {
+		min-height: 120px;
+	}
+
 	h3 {
 		color: $purple;
 		margin-bottom: 60px;
@@ -286,15 +290,16 @@ footer {
 	a.block {
 		padding: 30px 30px 40px 30px;
 		color: $white;
+		display: inline-block;
+		text-decoration: none;
 
 		h3 {
 			
 			transform: scale(1);
 			transition: all 0.2s;
+			display: inline-block;
 			
 		}
-		display: inline-block;
-		text-decoration: none;
 
 		&:hover {
 
