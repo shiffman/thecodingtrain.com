@@ -193,6 +193,10 @@ header {
 
 #featured-playlist {
 
+	h2 {
+		min-height: 120px;
+	}
+
 	h3 {
 		color: $purple;
 		margin-bottom: 60px;
