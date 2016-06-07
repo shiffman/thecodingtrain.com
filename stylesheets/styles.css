@@ -9055,14 +9055,33 @@ footer a.block.sh {
   }
 }
 
-/* line 337, ../sass/styles.scss */
+/* line 335, ../sass/styles.scss */
+.newsletter {
+  background: #9659A7;
+  color: #ffffff;
+}
+/* line 340, ../sass/styles.scss */
+.newsletter input {
+  padding: 32px 15px;
+  box-shadow: none;
+  border: none;
+  outline: 0;
+  width: 100%;
+  margin-bottom: 15px;
+}
+/* line 349, ../sass/styles.scss */
+.newsletter .btn {
+  width: 100%;
+}
+
+/* line 357, ../sass/styles.scss */
 .vertical-align {
   display: flex;
   align-items: center;
   height: 100%;
 }
 @media screen and (max-width: 991px) {
-  /* line 337, ../sass/styles.scss */
+  /* line 357, ../sass/styles.scss */
   .vertical-align {
     display: block;
   }

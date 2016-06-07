@@ -9,13 +9,11 @@ $(document).ready(function(){
 
 function getPlaylists() {
 
-	console.log(shiffmanPlaylists);
 	for (var i = 0; i < shiffmanPlaylists.length; i++) {
 		
 		$.get('https://www.googleapis.com/youtube/v3/playlists?key=AIzaSyADOKEHZag2UMG52bd7ApxDOssdzVo0j8I', { part: 'snippet' , id: shiffmanPlaylists[i]})
 		.done(function(data){
 
-			console.log(data);
 			populateData(data);
 
 		}, 'JSON')

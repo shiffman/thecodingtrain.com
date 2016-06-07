@@ -332,6 +332,26 @@ footer {
 
 }
 
+.newsletter {
+
+	background: $purple;
+	color: $white;
+
+	input {
+		padding: 32px 15px;
+	    box-shadow: none;
+	    border: none;
+	    outline: 0;
+	    width: 100%;
+	    margin-bottom: 15px;
+	}
+
+	.btn {
+		width: 100%;
+	}
+
+}
+
 // Helpers
 
 .vertical-align {
