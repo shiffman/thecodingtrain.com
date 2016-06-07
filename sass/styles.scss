@@ -40,6 +40,10 @@ body, html {
 
 	padding: 60px 100px;
 
+	@media screen and (max-width: $screen-sm-max) {
+		padding: 60px 30px;
+	}
+
 }
 
 h1, h2, h3 {
@@ -54,6 +58,13 @@ h3 {
 
 h1 {
 	font-size: 60px;
+
+	@media screen and (max-width: $screen-sm-max) {
+
+		font-size: 40px;
+	
+	}
+
 }
 
 p {
@@ -63,11 +74,16 @@ p {
 header {
 
 	position: absolute;
-	background: rgba(255,255,255,0.98);
+	//background: rgba(255,255,255,0.98);
 	padding: 10px 15px;
     height: 100px;
 	z-index:1;
 	width: 100%;
+
+	img {
+		max-width: 450px;
+		width: 100%;
+	}
 
 }
 
@@ -96,18 +112,35 @@ header {
 		box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.06);
 	}
 
+	@media screen and (max-width: $screen-xs-max) {
+
+		width: 100%;
+		margin-bottom: 15px;
+
+	}
+
 }
 
 #hero {
 
-	padding-top: 200px;
+	padding-top: 250px;
 	height: 100%;
 	position: relative;
 	background: $blue;
 	color: $white;
 
+	@media screen and (max-width: $screen-sm-max) {
+	 	height: auto;
+	 	text-align: center;
+
+	 	h1 {
+	 		margin-top: 60px;
+	 	}
+	}
+
 	a.btn {
 		color: $black;
+		margin-bottom: 15px;
 	}
 
 	.latest-container {
@@ -121,6 +154,12 @@ header {
     	-webkit-box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.06);
 		-moz-box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.06);
 		box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.06);
+		transform: rotate(3deg);
+		margin-top: 50px;
+
+		@media screen and (max-width: $screen-sm-max) {
+			margin-top: 100px;
+		}
 
     	.stamp {
     		font-family: $sans-serif;
@@ -163,6 +202,7 @@ header {
 
 		display: block;
 		margin-bottom: 30px;
+		min-height: 340px;
 
 		h3 {
 			color: $black;
@@ -177,13 +217,18 @@ header {
 			}
 		}
 
+		@media screen and (max-width: $screen-sm-max) {
+			min-height: auto;
+		}
+
 	}
 
-	.thumbnail {
+	.thumb {
 
 		width: 100%;
-		height: 200px;
-		background: $grey;
+		background-size: cover;
+		background-position: center;
+		padding-bottom: 56%;
 
 	}
 
@@ -238,32 +283,45 @@ footer {
 		color: #B3B3B3;
 	}
 
-	.block {
+	a.block {
 		padding: 30px 30px 40px 30px;
-		a {
-			color: $white;
+		color: $white;
+
+		h3 {
+			
 			transform: scale(1);
 			transition: all 0.2s;
-			display: inline-block;
-			text-decoration: none;
+			
+		}
+		display: inline-block;
+		text-decoration: none;
 
-			&:hover {
+		&:hover {
+
+			h3 {
+
 				transform: scale(1.2);
+				
 			}
 		}
+
 		&.noc {
 			background: $red;
 		}
 
 		&.lp {
 			background: $yellow;
-			a {
-				color: $black;
-			}
+			color: $black;
 		}
 
 		&.sh {
 			background: $blue;
+		}
+
+		@media screen and (max-width: $screen-sm-max) {
+
+			width: 100%;
+		
 		}
 	}
 
@@ -275,4 +333,10 @@ footer {
     display: flex;
     align-items: center;
     height: 100%;
+
+    @media screen and (max-width: $screen-sm-max) {
+
+		display: block;
+	
+	}
 }
