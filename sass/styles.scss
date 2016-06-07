@@ -1,0 +1,278 @@
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+@import "../typeface/stylesheet.css";
+
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic);
+
+$black: #212121;
+$white: #ffffff;
+$grey: #f1f1f1;
+
+$purple: #9659A7;
+$blue: #2494C1;
+$green: #49BB6C;
+$yellow: #F1C500;
+$red: #F35956;
+
+$sans-serif: 'cubanoregular';
+$serif: 'Noto Serif', georgia, serif;
+
+body, html {
+
+	min-height: 100%;
+	font-size: 18px;
+	font-family: $serif;
+	height: 100%;
+	position: relative;
+	line-height: 1.45em;
+	-webkit-font-smoothing: antialiased;
+
+}
+
+.container-fluid {
+
+	padding: 60px 100px;
+
+}
+
+h1, h2, h3 {
+
+	font-family: $sans-serif;
+
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h1 {
+	font-size: 60px;
+}
+
+p {
+	margin-bottom: 1.45em;
+}
+
+header {
+
+	position: absolute;
+	background: rgba(255,255,255,0.98);
+	padding: 10px 15px;
+    height: 100px;
+	z-index:1;
+	width: 100%;
+
+}
+
+.btn {
+
+	display: inline-block;
+	padding: 20px 20px;
+	background: $white;
+	font-size: 16px;
+	font-family: $sans-serif;
+	font-weight: 400;
+	color: $black;
+	-webkit-font-smoothing: antialiased;
+	transform: scale(1);
+	transition: all 0.15s;
+
+	-webkit-box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.06);
+	-moz-box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.06);
+	box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.06);
+
+	&:hover {
+
+		transform: scale(0.98);
+		-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.06);
+		-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.06);
+		box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.06);
+	}
+
+}
+
+#hero {
+
+	padding-top: 200px;
+	height: 100%;
+	position: relative;
+	background: $blue;
+	color: $white;
+
+	a.btn {
+		color: $black;
+	}
+
+	.latest-container {
+
+		border-radius: 3px;
+		border: 10px solid $yellow;
+    	background: #212121;
+    	position: relative;
+    	opacity: 0;
+    	transition: opacity 0.2s;
+    	-webkit-box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.06);
+		-moz-box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.06);
+		box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.06);
+
+    	.stamp {
+    		font-family: $sans-serif;
+    		color: $white;
+    		background: $red;
+    		font-size: 14px;
+    		text-align: center;
+    		padding: 10px 20px;
+    		position: absolute;
+    		z-index: 9;
+    		left: 50%;
+		    margin-left: -60px;
+		    border-radius: 5px;
+		    top: -30px;
+		    transform: rotate(4deg);
+    	}
+
+    	&.in {
+    		opacity: 1;
+    	}
+
+	}
+
+}
+
+.playlist-action {
+
+	background: $purple;
+
+}
+
+#featured-playlist {
+
+	h3 {
+		color: $purple;
+		margin-bottom: 60px;
+	}
+
+	a.feature-video {
+
+		display: block;
+		margin-bottom: 30px;
+
+		h3 {
+			color: $black;
+			transition: all 0.2s;
+		}
+
+		&:hover {
+			text-decoration: none;
+			
+			h3 {
+				color: $green;
+			}
+		}
+
+	}
+
+	.thumbnail {
+
+		width: 100%;
+		height: 200px;
+		background: $grey;
+
+	}
+
+	.btn {
+		background: $purple;
+		color: $white;
+	}
+
+}
+
+.actions {
+
+	background: $green;
+
+	
+
+}
+
+.about {
+	
+	background: $green;
+	color: $white;
+
+	.avatar {
+
+		width: 150px;
+		height: 150px;
+		background-size: cover;
+		background-position: center center;
+		border-radius: 50%;
+		border: 5px solid $purple;
+		display: inline-block;
+		-webkit-box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.06);
+		-moz-box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.06);
+		box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.06);
+
+	}
+
+	a.btn {
+
+		color: $black;
+
+	}
+
+}
+
+footer {
+
+	padding: 60px 15px 0 15px !important;
+	.title {
+		margin-bottom: 75px;
+		color: #B3B3B3;
+	}
+
+	.block {
+		padding: 30px 30px 40px 30px;
+		a {
+			color: $white;
+			transform: scale(1);
+			transition: all 0.2s;
+			display: inline-block;
+			text-decoration: none;
+
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+		&.noc {
+			background: $red;
+		}
+
+		&.lp {
+			background: $yellow;
+			a {
+				color: $black;
+			}
+		}
+
+		&.sh {
+			background: $blue;
+		}
+	}
+
+}
+
+// Helpers
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
