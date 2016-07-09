@@ -21,9 +21,21 @@ function getLatest() {
       order: 'date'
     })
     .done(function(data) {
+			// Scan until you find a video that's not a playlistId
+			// Not sure why playlists are showing up
+			var index = 0;
+			// console.log(data.items[index].id);
+			while (data.items[index].id.playlistId) {
+				index++;
+				if (index > 100) {
+					index = 0;
+					// something must have gone wrong
+					break;
+				}
+			}
+			var videoID = data.items[index].id.videoId;
 
-      var videoID = data.items[0].id.videoId;
-      buildPlayer(videoID, 'latest-video');
+			buildPlayer(videoID, 'latest-video');
 
     }, 'JSON')
     .error(function() {
@@ -83,7 +95,7 @@ function populateData(data) {
   $.each(data.items, function(index, playlist) {
 
     var target = $('#playlist-' + index);
-    console.log('playlist');
+    //console.log('playlist');
 
     target.find('h2').html(playlist.snippet.title);
 
@@ -105,7 +117,7 @@ function videoList(target, playlist) {
 
       $.each(data.items, function(index, item) {
 
-        console.log(item)
+        //console.log(item)
 
         if (index < limit) {
 
