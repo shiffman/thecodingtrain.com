@@ -17,6 +17,7 @@ html {
 /* line 19, ../../../../usr/local/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.5.1/assets/stylesheets/bootstrap/_normalize.scss */
 body {
   margin: 0;
+  background-color: #999;
 }
 
 /* line 33, ../../../../usr/local/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.5.1/assets/stylesheets/bootstrap/_normalize.scss */
@@ -1723,7 +1724,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #fff;
+  /*background-color: #fff;*/
 }
 
 /* line 36, ../../../../usr/local/lib/ruby/gems/2.1.0/gems/bootstrap-sass-3.3.5.1/assets/stylesheets/bootstrap/_scaffolding.scss */
@@ -8822,14 +8823,14 @@ p {
 /* line 74, ../sass/styles.scss */
 header {
   position: absolute;
-  padding: 10px 15px;
+  padding: 0px 0px;
   height: 100px;
   z-index: 1;
   width: 100%;
 }
 /* line 83, ../sass/styles.scss */
 header img {
-  max-width: 450px;
+  /*max-width: 450px;*/
   width: 100%;
 }
 
@@ -8869,8 +8870,9 @@ header img {
   padding-top: 250px;
   height: 100%;
   position: relative;
-  background: #2494C1;
-  color: #ffffff;
+  /*background: #2494C1;*/
+  color: #000;
+  z-index: 2;
 }
 @media screen and (max-width: 991px) {
   /* line 124, ../sass/styles.scss */
